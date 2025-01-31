@@ -1,0 +1,14 @@
+Review Dataset Features:
+review_id, user_id, business_id, stars, useful, funny, cool, text, date
+
+User Dataset Features:
+user_id, name, review_count, yelping_since, useful, funny, cool, elite, friends, fans, average_stars, compliment_hot, compliment_more, compliment_profile, compliment_cute, compliment_list, compliment_note, compliment_plain, compliment_cool, compliment_funny, compliment_writer, compliment photos
+
+Tip Dataset Features:
+user_id, business_id, text, date, compliment_count
+
+Checkin Dataset Features:
+business_id, date
+
+Business Dataset Features:
+business_id, name, address, city, state, postal code, latitude, longitutde, stars, review_count, is_open, attributes, categories, hours
