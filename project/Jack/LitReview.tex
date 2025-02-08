@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+\title{Capstone Project Literature Review: Yelp Sentiment Analysis}
+\author{Joshua Aflleje, Nicole Feil, Andrew Liu, and Jack Oebker}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+Yelp, a prominent online review platform, hosts millions of user-generated opinions covering restaurants, healthcare providers, and a wide range of local businesses. These reviews serve as a valuable resource for consumers seeking insights into businesses and services, while also providing business owners with feedback that can inform operational improvements. While numerical star ratings offer a quick reference point, they often fail to capture the depth and nuances of consumer sentiment. A five-star rating may indicate general satisfaction, but it does not differentiate whether that satisfaction is driven by factors such as exceptional food quality, outstanding service, or affordability.
+
+Recent advances in sentiment analysis have attempted to bridge this gap by moving beyond overall sentiment classification toward more fine-grained analyses. Researchers now aim to extract actionable insights from textual reviews by identifying specific features—such as food taste, service quality, ambiance, or physician bedside manner—that contribute to positive or negative feedback. This transition toward **aspect-based sentiment analysis (ABSA)** has enabled businesses and researchers to obtain a more detailed understanding of customer experiences.
+
+The foundations of this shift can be traced back to Hu \& Liu (2004)\cite{HuLiu2004}, who introduced the concept of extracting specific aspects (or features) from reviews, thereby improving sentiment classification granularity. Their research laid the groundwork for modern approaches in opinion mining, which now incorporate sophisticated natural language processing (NLP) and machine learning techniques. Subsequent research, including Keller \& Kostromitina (2020)\cite{KellerKostromitina2020}, Nakayama \& Wan (2019)\cite{NakayamaWan2019}, Chen \& Lee (2024)\cite{ChenLee2024UPRa}, and Grant \& Booth (2009)\cite{GrantBooth2009}, expanded upon these methods by incorporating cross-cultural considerations, domain-specific challenges, and systematic approaches to literature reviews.
+
+Moreover, as sentiment analysis techniques have grown more advanced, researchers have identified key challenges such as **data biases and review authenticity**. Studies such as Liang (2018)\cite{Liang2018} have demonstrated how NLP models can predict Yelp ratings based on review text, while Mukherjee et al. (2021)\cite{Mukherjee2021} have explored the impact of fake reviews and how they distort sentiment analysis outcomes. This literature review synthesizes these contributions, illustrating how Yelp sentiment analysis has evolved to become more accurate, context-aware, and methodologically rigorous.
+
+\section{Background}
+
+\subsection{The Emergence of Feature-Based Opinion Summaries}
+
+Sentiment analysis research initially focused on classifying entire reviews as either positive or negative, largely ignoring the **multi-aspect nature** of customer feedback. This approach often oversimplified consumer opinions, particularly for multi-faceted products and services where different aspects could receive distinct evaluations. For instance, a hotel might receive praise for its cleanliness but criticism for its customer service, and an aggregated sentiment label would fail to capture this distinction.
+
+Hu \& Liu (2004)\cite{HuLiu2004} revolutionized sentiment analysis by introducing **aspect-based sentiment analysis (ABSA)**, which extracts specific product or service attributes from reviews and evaluates their associated sentiment. Their research involved identifying opinion words (e.g., "delicious," "expensive," "friendly") and linking them to corresponding features (e.g., "food," "price," "service"). This methodology paved the way for more granular insights in sentiment analysis and has since been widely adopted in Yelp studies. Businesses can now pinpoint which aspects of their service contribute to customer satisfaction or dissatisfaction, allowing for more targeted improvements.
+
+\subsection{The Role of Cultural and Linguistic Factors}
+
+While aspect-based sentiment analysis improves granularity, Nakayama \& Wan (2019)\cite{NakayamaWan2019} emphasized the **importance of cultural and linguistic factors** in how consumers express opinions. Their study compared Yelp reviews of ethnic restaurants in Japan and the United States, revealing stark differences in review focus and sentiment expression.
+
+For instance, Japanese Yelp users tended to prioritize **food quality and price fairness**, often using reserved or indirect language to express dissatisfaction. In contrast, American users placed more emphasis on **service and ambiance**, frequently using exaggerated language, such as "amazing" or "terrible," to describe their experiences. These findings suggest that sentiment analysis models trained on English-language reviews may not generalize well to other cultures, leading to potential misclassifications when applied globally.
+
+This research underscores the need for **localized sentiment analysis models** that take into account cultural differences in language use, rating behaviors, and customer priorities. As businesses expand internationally, sentiment analysis tools must adapt to these variations to maintain accuracy in consumer sentiment interpretation.
+
+\subsection{Application to Non-Restaurant Domains}
+
+Although Yelp is most commonly associated with restaurant reviews, its influence extends to **non-food-related businesses**, including healthcare. Chen \& Lee (2024)\cite{ChenLee2024UPRa} examined how Yelp ratings impact physician selection, demonstrating that sentiment-laden text in reviews significantly influences patient decision-making.
+
+Their study found that **specific textual cues**—such as references to **bedside manner, wait times, and communication skills**—were strong predictors of patient choices. Unlike restaurant reviews, where aspects like food quality and ambiance dominate, healthcare reviews rely heavily on **trust and personal experience narratives**. Using econometric techniques such as **instrumental variable analysis** and **difference-in-differences modeling**, the researchers established a direct link between **Yelp sentiment and patient volume**, showing that positive or negative sentiment directly affects physician revenue and reputation.
+
+This research highlights the **expanding role of sentiment analysis beyond consumer goods**, making it applicable to professional services where interpersonal interactions shape consumer decisions. It also suggests that businesses in diverse industries can benefit from opinion mining to improve customer engagement and service quality.
+
+\subsection{Systematic Approaches to Literature Reviews}
+
+As sentiment analysis research has proliferated, ensuring methodological rigor in literature synthesis has become increasingly important. Grant \& Booth (2009)\cite{GrantBooth2009} proposed a **structured framework** for conducting systematic literature reviews, addressing the challenges of selecting, evaluating, and summarizing research findings.
+
+Their **SALSA framework** (**Search, Appraisal, Synthesis, and Analysis**) provides a replicable approach to literature review methodologies. By applying this framework to Yelp sentiment analysis studies, researchers can ensure **transparency and consistency** in how data is gathered, assessed, and interpreted. This is especially valuable given the vast volume of user-generated content on Yelp, where biases in data selection or preprocessing can significantly impact results.
+
+The SALSA framework has been widely adopted in sentiment analysis research, allowing for a **standardized approach** to evaluating user reviews, identifying relevant features, and synthesizing findings in a way that minimizes bias.
+
+\subsection{Understanding Yelp Ratings for Independent Restaurants}
+
+Keller \& Kostromitina (2020)\cite{KellerKostromitina2020} explored **how non-chain restaurants are rated on Yelp**, differentiating them from larger franchise operations. Their study analyzed thousands of Yelp reviews to uncover **key factors that influence star ratings**, including:
+
+- **Ambiance and Atmosphere**: Independent restaurants are more likely to be judged on their uniqueness and atmosphere.
+- **Service Quality**: Personalized service plays a more critical role in non-chain establishments.
+- **Price Perception**: Customers of independent restaurants are more sensitive to perceived value for money.
+
+Their findings emphasize the **importance of contextualizing sentiment analysis models** based on business type, as factors influencing ratings can vary significantly between independent and chain restaurants.
+
+\subsection{Predicting Yelp Ratings Using Sentiment and Topic Models}
+
+Liang (2018)\cite{Liang2018} examined how **machine learning models can predict Yelp ratings** based on sentiment and topic models. The study employed **natural language processing (NLP) techniques** to analyze review text and infer numerical ratings, demonstrating the feasibility of **automated review classification**.
+
+By using topic modeling approaches such as **Latent Dirichlet Allocation (LDA)**, Liang's study identified **hidden themes in Yelp reviews** and mapped them to sentiment scores, highlighting how computational methods can enhance traditional sentiment analysis.
+
+\section{Methodologies}
+Aspect-Based Sentiment Analysis (ABSA) provides a structured approach to extracting aspects and associating sentiments with each aspect.  Modern deep learning approaches, such as BERT-based transformers, have significantly improved the performance of ABSA tasks.  By implementing ABSA, Yelp reviews can be compiled to provide a more structured representation of opinions rather than relying on aggregated star ratings.
+
+From aspect-based sentiment, generative models can be used to create general sentiment representations.  This will be further refined to present synthetic reviews of businesses at every star level.  These reviews, conditioned on real sentiment trends, allow users to better understand a business and the business's advantages and disadvantages without having to manually sift through a large number of reviews.
+
+Currently, Yelp suggests businesses based on categories and location.  This method does not account for sentiment-driven preferences.  Clustering businesses based on user sentiment trends may be more effective than just categories (MAYBE INSERT SOURCE HERE).  From there, a vector-based similarity model can be used to suggest businesses with similar strengths in weaknesses.  This should improve personalization, allowing users to find businesses aligned with their specific preferences.
+
+\section{Conclusion}
+
+The evolution of sentiment analysis has transformed how businesses and researchers interpret consumer feedback on platforms like Yelp. While early sentiment analysis methods treated reviews as singularly positive or negative, the introduction of **aspect-based sentiment analysis (ABSA)** by Hu \& Liu (2004)\cite{HuLiu2004} marked a significant shift, enabling more granular extraction of insights from user-generated content. This refinement has allowed businesses to pinpoint specific aspects of their services—such as food quality, service efficiency, or affordability—that drive customer satisfaction or dissatisfaction.
+
+Further research, such as Nakayama \& Wan (2019)\cite{NakayamaWan2019}, emphasized that sentiment expression is **not uniform across cultures and languages**. The study’s findings suggest that applying a universal sentiment analysis model without accounting for cultural differences can lead to misleading conclusions. Similarly, Chen \& Lee (2024)\cite{ChenLee2024UPRa} extended the application of sentiment analysis beyond restaurants, demonstrating how consumer sentiment on Yelp influences healthcare decisions and patient choices. These findings suggest that sentiment analysis can be a valuable tool in domains beyond traditional retail and hospitality, including healthcare and professional services.
+
+The methodological rigor of sentiment analysis research has also evolved, with Grant \& Booth (2009)\cite{GrantBooth2009} advocating for **structured approaches to literature reviews**. Their **SALSA framework** ensures consistency in evaluating user-generated content, particularly as researchers deal with increasing volumes of review data. Additionally, Keller \& Kostromitina (2020) \cite{KellerKostromitina2020} highlighted how Yelp ratings for independent restaurants differ from those of chain establishments, further emphasizing the importance of context in sentiment analysis.
+
+Despite these advancements, challenges remain in ensuring **data integrity and authenticity**. Studies such as Liang (2018)\cite{Liang2018} have demonstrated the effectiveness of **machine learning models** in predicting Yelp ratings based on sentiment and topic models. However, Mukherjee et al. (2021)\cite{Mukherjee2021} revealed **potential biases in Yelp’s fake review detection system**, suggesting that extreme sentiment reviews—whether genuine or not—are disproportionately flagged as suspicious. This introduces a challenge for researchers and businesses relying on Yelp data, as sentiment analysis models may inadvertently reflect these biases.
+
+The methodologies explored in this literature review highlight promising directions for future research. **Deep learning approaches**, such as transformer-based models (e.g., BERT), offer **improved accuracy in aspect-based sentiment analysis**, allowing researchers to build more nuanced sentiment models. Furthermore, **generative models** have the potential to synthesize sentiment-driven reviews that provide users with a clearer representation of business strengths and weaknesses. Additionally, incorporating **sentiment-driven clustering and vector-based similarity models** could improve Yelp’s business recommendation system, making suggestions more personalized and user-centric.
+
+Ultimately, Yelp sentiment analysis serves as a powerful tool for businesses, consumers, and researchers. By refining methodologies and addressing challenges such as review authenticity and cultural bias, sentiment analysis can continue to provide **more accurate, insightful, and actionable intelligence** across various domains. The findings in this review underscore the importance of combining **computational techniques, domain knowledge, and methodological rigor** to ensure that Yelp data is leveraged effectively for decision-making and business strategy.
+
+\newpage
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}
