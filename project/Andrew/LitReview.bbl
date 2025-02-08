@@ -1,0 +1,62 @@
+\begin{thebibliography}{}
+
+\bibitem[Aziz et~al., 2024]{Aziz2024}
+Aziz, K., Ji, D., Chakrabarti, P., Chakrabarti, T., Iqbal, M.~S., and Abbasi,
+  R. (2024).
+\newblock Unifying aspect-based sentiment analysis bert and multi-layered graph
+  convolutional networks for comprehensive sentiment dissection.
+\newblock {\em Scientific Reports}, 14(1):14646--22.
+
+\bibitem[Chen and Lee, 2024]{ChenLee2024}
+Chen, Y. and Lee, S. (2024).
+\newblock User-generated physician ratings and their effects on patients’
+  physician choices: Evidence from yelp.
+\newblock {\em Journal of Marketing}, 88(1):77--96.
+
+\bibitem[Hu and Liu, 2004]{HuLiu2004}
+Hu, M. and Liu, B. (2004).
+\newblock Mining and summarizing customer reviews.
+\newblock In {\em Proceedings of the 10th ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining (KDD '04)}, pages 168--177, New York,
+  NY, USA. ACM.
+
+\bibitem[Keller and Kostromitina, 2020]{KellerKostromitina2020}
+Keller, D. and Kostromitina, A. (2020).
+\newblock Characterizing non-chain restaurants’ yelp star ratings:
+  Generalizable findings from a representative sample of yelp reviews.
+\newblock {\em International Journal of Hospitality Management}, 86:102440.
+
+\bibitem[Liang, 2018]{Liang2018}
+Liang, Y. (2018).
+\newblock Yelp rating prediction with sentiment and topic models.
+\newblock {\em North Carolina Libraries}, 76(1):33--40.
+
+\bibitem[Liu, 2020]{liu2020sentiment}
+Liu, S. (2020).
+\newblock Sentiment analysis of yelp reviews: A comparison of techniques and
+  models.
+\newblock {\em arXiv preprint}, arXiv:2004.13851.
+
+\bibitem[Mukherjee et~al., 2021]{Mukherjee2021}
+Mukherjee, A., Venkataraman, V., Liu, B., and Glance, N. (2021).
+\newblock What yelp fake review filter might be doing?
+\newblock In {\em Proceedings of the International AAAI Conference on Web and
+  Social Media}, volume~7, pages 409--418. AAAI Press.
+
+\bibitem[Olson et~al., 2021]{olson2021reading}
+Olson, A.~W., Calder{\'o}n-Figueroa, F., Bidian, O., Silver, D., and Sanner, S.
+  (2021).
+\newblock Reading the city through its neighbourhoods: Deep text embeddings of
+  yelp reviews as a basis for determining similarity and change.
+\newblock {\em Cities}, 110:103045.
+
+\bibitem[Rahimi et~al., 2018]{rahimi2018geography}
+Rahimi, S., Mottahedi, S., and Liu, X. (2018).
+\newblock The geography of taste: using yelp to study urban culture.
+\newblock {\em ISPRS International Journal of Geo-Information}, 7(9):376.
+
+\bibitem[{ReviewTrackers}, 2025]{reviewtrackers2025}
+{ReviewTrackers} (2025).
+\newblock Customer reviews statistics and trends.
+
+\end{thebibliography}
