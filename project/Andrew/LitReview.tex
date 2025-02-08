@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{authblk}
+\usepackage{fullpage}
+\usepackage{apacite}
+
+\title{Capstone Project Literature Review: Yelp Sentiment Analysis}
+\author{Joshua Aflleje}
+\author{Nicole Feil}
+\author{Andrew Liu}
+\author{Jack Oebker}
+\affil{Arizona State University, Tempe, AZ 85281, USA}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Online reviews play a crucial role in shaping consumer behavior and business success. Platforms like Yelp, Google Reviews, and TripAdvisor significantly influence purchasing decisions. Research indicates that over 90 percent of consumers read online reviews before visiting a business, and 84 percent trust online reviews as much as personal recommendations. Despite its widespread use, Yelp’s system has significant limitations, including bias in reviews, difficulty capturing nuanced sentiment, and an over-reliance on numerical star ratings. Advances in aspect-based sentiment analysis (ABSA), machine learning models, and fake review detection techniques have improved how sentiment is understood in large-scale datasets like Yelp. This literature review synthesizes past research on sentiment analysis, explores methodologies for aspect-based classification, sentiment-driven clustering, and fake review filtering, and discusses how consumer behavior is impacted by Yelp reviews.
+\end{abstract}
+
+\section{Introduction}
+
+Yelp, a prominent online review platform, hosts millions of user-generated opinions covering restaurants, healthcare providers, and various local businesses. These reviews provide valuable insights for both consumers and business owners, shaping purchasing behavior and informing service improvements. However, Yelp's star rating system reduces complex, multi-faceted reviews into single numerical values, failing to capture the depth and nuances of consumer sentiment.
+
+Recent advances in sentiment analysis have attempted to bridge this gap by moving beyond simple sentiment classification to more granular, aspect-based approaches. Researchers now aim to extract actionable insights by identifying specific features—such as food taste, service quality, and ambiance—that influence positive or negative feedback \cite{HuLiu2004}. 
+
+Despite the usefulness of Yelp, researchers have identified key challenges such as bias in data, fake review filtering inaccuracies, and cultural differences in sentiment expression. Studies have shown that Yelp’s filtering algorithm disproportionately flags extreme sentiment reviews—whether genuine or not—introducing bias into overall ratings \cite{Mukherjee2021}. Further, cross-cultural differences in review expression lead to inaccuracies in sentiment classification models, which were primarily trained on Western reviews \cite{NakayamaWan2019}.
+
+\subsection{Background}
+
+\subsubsection{The Emergence of Feature-Based Sentiment Summarization}
+Sentiment analysis initially focused on classifying entire reviews as positive or negative, oversimplifying multi-aspect consumer feedback. However, Hu \& Liu (2004) \cite{HuLiu2004} introduced aspect-based sentiment analysis (ABSA), which identifies specific product or service attributes and evaluates their associated sentiment. ABSA has since been widely used in Yelp studies to enable businesses to understand which aspects drive customer satisfaction or dissatisfaction.
+
+\subsubsection{Cultural and Linguistic Bias in Sentiment Analysis}
+Nakayama \& Wan (2019) \cite{NakayamaWan2019} found that cultural norms shape how users express sentiment on Yelp. Their research highlights that Western users prioritize service and ambiance, whereas Japanese users focus on food quality and price fairness. This cultural bias suggests that sentiment models trained on English reviews may misinterpret non-Western reviews, leading to misclassification errors in Yelp sentiment analysis.
+
+\subsubsection{Fake Review Detection and Yelp's Filtering Algorithm}
+Mukherjee et al. (2021) \cite{Mukherjee2021} examined Yelp’s fake review filtering system and found that:
+\begin{itemize}
+    \item Yelp’s algorithm flags extreme sentiment reviews, even when they are legitimate.
+    \item Behavioral cues (reviewer activity, rating patterns) outperform linguistic analysis in fake review detection.
+    \item Crowdsourced fake reviews differ significantly from real-life spam, meaning models trained on artificial datasets often fail when applied to Yelp.
+\end{itemize}
+These findings indicate that hybrid models combining linguistic and behavioral features are essential for improving fake review detection.
+
+\subsubsection{Yelp’s Impact on Non-Restaurant Domains}
+Chen \& Lee (2023) \cite{ChenLee2024} analyzed Yelp physician reviews and found that sentiment strongly influences patient choice. Their research showed that a one-star increase in rating resulted in a 1.9\% revenue increase and a 1.2\% rise in patient volume. This validates the real-world impact of sentiment analysis beyond restaurants, showing that user-generated sentiment can shape healthcare decisions.
+
+\section{Methodologies}
+
+\subsection{Aspect-Based Sentiment Analysis (ABSA)}
+Aspect-based sentiment analysis (ABSA) provides a structured approach to extracting key features from Yelp reviews and assigning sentiment labels to those aspects \cite{HuLiu2004}. Deep learning techniques, such as BERT-based transformers, have significantly enhanced ABSA performance.
+
+\subsection{Sentiment-Driven Business Recommendations}
+Currently, Yelp suggests businesses based on categories and location, without factoring in sentiment-driven preferences. Clustering businesses based on user sentiment trends can offer a more personalized recommendation system \cite{KellerKostromitina2020}. This can be achieved using vector-based similarity models, which compare businesses based on review sentiment patterns rather than just business type.
+
+\subsection{Synthetic Review Generation}
+Generative models, such as GPT-based architectures, can create synthetic reviews at different star levels. These synthetic reviews, conditioned on real sentiment trends, allow users to better understand a business’s strengths and weaknesses without manually reading thousands of reviews.
+
+\subsection{Conclusion}
+Yelp sentiment analysis has evolved from simple star ratings to complex aspect-based insights. Research has demonstrated that businesses are affected by review sentiment, particularly in healthcare and service industries \cite{ChenLee2024}. However, challenges such as fake review filtering, cultural biases, and oversimplification of sentiment remain significant obstacles \cite{Mukherjee2021}. 
+
+To enhance Yelp's effectiveness, researchers have explored deep learning models for sentiment classification, clustering techniques for better business recommendations, and synthetic review generation to create structured summaries. The continued integration of ABSA, behavioral analytics, and machine learning techniques will shape the next phase of sentiment-driven business intelligence.
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}
